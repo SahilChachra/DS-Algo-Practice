@@ -237,7 +237,9 @@ bool checkMirrorTree(node* a, node* b)
         return true;
     }
       return false;
-}bool checkMirrorTree(node* a, node* b)
+}
+
+bool checkMirrorTree(node* a, node* b)
 {
     
     if(a==NULL && b==NULL)
