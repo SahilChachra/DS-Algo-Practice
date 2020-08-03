@@ -186,6 +186,76 @@ void averageOfAllLevels(Node* root){
 	}
 }
 
+int sum(node* root){
+  if (root==NULL)
+    return 0;
+  else
+    return sum(root->left) + root->value + sum(root->right);
+}
+
+bool checkSumTree(node* root)
+{
+    int ls,rs;
+	
+	if(root==NULL || root->left==NULL || root->right==NULL)
+		return 1;
+	
+	ls = sum(root->left);
+	rs = sum(root->right);
+	
+	if((root->value == ls+rs) && checkSumTree(root->left) && checkSumTree(root->right))
+		return true;
+	else
+		return false;
+	
+}
+
+Node* findLowestAncestor(Node* root,int v1, int v2)
+{
+    if(root->data > max(v1,v2))
+      return findLowestAncestor(root->left, v1,v2);
+    else if(root->data < min(v1,v2))
+      return findLowestAncestor(root->right,v1,v2);
+    else
+      return root;
+}
+
+bool checkMirrorTree(node* a, node* b)
+{
+    
+    if(a==NULL && b==NULL)
+      return true;
+    
+    if(a==NULL && b!=NULL)
+      return false;
+    
+    if(a!=NULL && b==NULL)
+      return false;
+    
+    if(a->value == b->value){
+      if(checkMirrorTree(a->left,b->right) && checkMirrorTree(a->right,b->left))
+        return true;
+    }
+      return false;
+}bool checkMirrorTree(node* a, node* b)
+{
+    
+    if(a==NULL && b==NULL)
+      return true;
+    
+    if(a==NULL && b!=NULL)
+      return false;
+    
+    if(a!=NULL && b==NULL)
+      return false;
+    
+    if(a->data == b->data){
+      if(checkMirrorTree(a->left,b->right) && checkMirrorTree(a->right,b->left))
+        return true;
+    }
+      return false;
+}
+
 int main() {
 	Node* root = NULL; 
 	root = Insert(root,15);	
