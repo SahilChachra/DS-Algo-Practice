@@ -23,7 +23,7 @@ void DFSUtil(vector<int> g[],int v, int visited[]){
 void countConnected(vector<int> g[], int V){
 	
 	int visited[V] = {0};
-	int c;
+	int c=0;
 	for(int v=0;v<V;v++){
 		if(visited[v]==0){
 			DFSUtil(g, v, visited);
@@ -33,8 +33,7 @@ void countConnected(vector<int> g[], int V){
 	}
 	//cout<<"Count : "<<c<<endl;
 	cout<<c<<endl;
-	delete[] visited;
-	
+	//delete[] visited;
 }
 
 int main(){
@@ -55,5 +54,4 @@ int main(){
 		}
 		countConnected(g, V);
 	}
-	
 }
