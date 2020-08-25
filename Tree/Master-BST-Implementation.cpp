@@ -83,7 +83,7 @@ int findHeight(Node* root){
 	*/
 }
 
-int calculateSize(node* root)
+int calculateSize(Node* root)
 {
     //write your code here
     if(root==NULL)
@@ -186,14 +186,14 @@ void averageOfAllLevels(Node* root){
 	}
 }
 
-int sum(node* root){
+int sum(Node* root){
   if (root==NULL)
     return 0;
   else
-    return sum(root->left) + root->value + sum(root->right);
+    return sum(root->left) + root->data + sum(root->right);
 }
 
-bool checkSumTree(node* root)
+bool checkSumTree(Node* root)
 {
     int ls,rs;
 	
@@ -203,7 +203,7 @@ bool checkSumTree(node* root)
 	ls = sum(root->left);
 	rs = sum(root->right);
 	
-	if((root->value == ls+rs) && checkSumTree(root->left) && checkSumTree(root->right))
+	if((root->data == ls+rs) && checkSumTree(root->left) && checkSumTree(root->right))
 		return true;
 	else
 		return false;
@@ -220,7 +220,7 @@ Node* findLowestAncestor(Node* root,int v1, int v2)
       return root;
 }
 
-bool checkMirrorTree(node* a, node* b)
+bool checkMirrorTree(Node* a, Node* b)
 {
     
     if(a==NULL && b==NULL)
@@ -232,14 +232,14 @@ bool checkMirrorTree(node* a, node* b)
     if(a!=NULL && b==NULL)
       return false;
     
-    if(a->value == b->value){
+    if(a->data == b->data){
       if(checkMirrorTree(a->left,b->right) && checkMirrorTree(a->right,b->left))
         return true;
     }
       return false;
 }
 
-bool checkMirrorTree(node* a, node* b)
+bool checkMirrorTree(Node* a, Node* b)
 {
     
     if(a==NULL && b==NULL)
