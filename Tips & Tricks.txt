@@ -1,0 +1,20 @@
+HEAP
+- Kth largest - use Min heap
+- Kth smallest - use Max heap
+
+Dynamic Programming
+
+- Use Recursion when you can choose something
+- If choice then Recursion and try Dynamic
+- Use DP when - Choose something + optimal or maximum 
+- Either Memoization or Top down approach
+- 0/1 Knapsack
+- Recusrion + Storage = DP
+- Choice Diagram
+- Base Condition : Think about smallest valid i/p
+- DP should call the recursive function with value less than prev value
+- 
+
+Greedy
+- Fractional Knapsack
+
