@@ -13,7 +13,10 @@ Dynamic Programming
 - Choice Diagram
 - Base Condition : Think about smallest valid i/p
 - DP should call the recursive function with value less than prev value
-- 
+- Memoization : Create matrix for which values are changing : for us - w and size 
+- Top down : Matrix
+- Complexity of both are almost same
+- Drawback in Memoize is - it keeps on calling function so stack get full
 
 Greedy
 - Fractional Knapsack
