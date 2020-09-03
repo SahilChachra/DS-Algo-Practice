@@ -14,9 +14,28 @@ Dynamic Programming
 - Base Condition : Think about smallest valid i/p
 - DP should call the recursive function with value less than prev value
 - Memoization : Create matrix for which values are changing : for us - w and size 
-- Top down : Matrix
+- Bottom up : Matrix
+- Memoize - Recursive call + Table
 - Complexity of both are almost same
-- Drawback in Memoize is - it keeps on calling function so stack get full
+- Drawback in Memoize is - it keeps on calling function so stack get full 
+- Bottom up(Tabular) : omits Recursive calls to prevent stack from over flowing
+- Bottom Up : Only table
+- n+1 w+1 to store data upto n and w : w becomes column and n becomes row
+- Bottom Up : Step 1 : initialization, Step 2 : Changing recursive call to iteration 
+- Sub problem : T[2,3] = when wt is 3 is allowed and item is 1 & 2, it shows maximum profit
+- t[n,w] = gives max profit which is our answer
+- table's 1st row and 1st col is initialized with values of items and w(wt of bag)
+- Base condition becomes initialization 
+-   w=0 w=1 w=2 
+ n=0
+ n=1
+ n=2
+
+- If we get 1 array : we treat it as wt array
+- IDENTIFICATION TO SOLVE USING KNAPSACK : you are given a set of numbers and you have get some maximum value and you have choice to either take or drop then it is knapsack
+
+- Subset Problem : check if  given sum possible from subset
+	: 
 
 Greedy
 - Fractional Knapsack
