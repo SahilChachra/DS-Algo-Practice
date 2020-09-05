@@ -20,8 +20,11 @@ public class EqualSumPartition {
         if(sum==0)
             return true;
         if(size==0)
-            return true;
-        return subset(arr, size-1, sum-arr[size-1]);
+            return false;
+        if(arr[size-1]<=sum)
+            return subset(arr, size-1, sum-arr[size-1]);
+        else
+            return subset(arr, size-1, sum);
     }
 
 }
