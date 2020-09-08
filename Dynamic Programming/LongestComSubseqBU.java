@@ -1,6 +1,6 @@
 public class LongestComSubseqBU {
 
-    public int returnLCS(String s1, String s2){
+    public int getLCS(String s1, String s2){
         int l = LCS(s1.toCharArray(), s2.toCharArray(), s1.length(), s2.length());
         return l;
     }
