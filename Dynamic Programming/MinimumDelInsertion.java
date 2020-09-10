@@ -20,11 +20,11 @@ public class MinimumDelInsertion {
 
 
         for(i=1;i<=n;i++){
-            for(j=1; j<=m;j++){
-                if(x[i-1]==y[j-1])
-                    t[i][j]=1+t[i-1][j-1];
+            for(j=1;j<=m;j++){
+                if(x[i-1]==y[i-1])
+                    t[i][j] = 1 + t[i-1][j-1];
                 else
-                    t[i][j] = t[i-1][j-1];
+                    t[i][j] = Math.max(t[i-1][j], t[i][j-1]);
             }
         }
 
