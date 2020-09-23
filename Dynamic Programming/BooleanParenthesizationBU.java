@@ -35,7 +35,6 @@ public class BooleanParenthesizationBU {
             return map.get(tm);
 
         int ans = 0;
-
         for(int k = i+1; k<=j-1;k+=2) {
             int lt = solve(s, i, k-1, 'T');
             int lf = solve(s, i, k-1, 'F');
@@ -67,6 +66,7 @@ public class BooleanParenthesizationBU {
 
     public static void main(String[] args) {
         BooleanParenthesizationBU bpb = new BooleanParenthesizationBU();
-        System.out.println(bpb.solve("T|F|T&F^F",0,8,'T'));
+        String s = "T|F&T";
+        System.out.println(bpb.solve(s,0,s.length()-1,'T'));
     }
 }

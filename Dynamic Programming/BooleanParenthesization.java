@@ -51,4 +51,10 @@ public class BooleanParenthesization {
         return ans;
     }
 
+    public static void main(String[] args) {
+        BooleanParenthesization bp = new BooleanParenthesization();
+        String s = "T|F&T";
+        System.out.println(bp.solve(s,0,s.length()-1,'T'));
+    }
+
 }
